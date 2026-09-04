@@ -1,0 +1,66 @@
+#ignore code formatter
+/BuildTools/.build
+/BuildTools/Package.resolved
+
+.vscode/
+# Created by https://www.toptal.com/developers/gitignore/api/xcode
+# Edit at https://www.toptal.com/developers/gitignore?templates=xcode
+
+### Xcode ###
+## User settings
+xcuserdata/
+
+## Xcode 8 and earlier
+*.xcscmblueprint
+*.xccheckout
+
+### Xcode Patch ###
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcodeproj/project.xcworkspace/
+!*.xcworkspace/contents.xcworkspacedata
+/*.gcno
+**/xcshareddata/WorkspaceSettings.xcsettings
+
+# End of https://www.toptal.com/developers/gitignore/api/xcode
+Pods/
+Podfile.lock
+
+WebbCompanion.xcworkspace/
+
+# DS files
+.DS_Store
+._.DS_Store
+**/.DS_Store
+**/._.DS_Store
+
+# ---------------------------------------------------------------------------
+# Deployment-specific and sensitive material -- must never be published.
+# ---------------------------------------------------------------------------
+
+# Site-specific build settings (team ID, push endpoint, PBX domains, STUN).
+# Template lives in Config/Deployment.local.xcconfig.example.
+Config/Deployment.local.xcconfig
+
+# Signing keys, certificates and provisioning profiles in any form.
+VoipServiceCerts/
+*.p12
+*.pfx
+*.pem
+*.cer
+*.crt
+*.key
+*.certSigningRequest
+*.mobileprovision
+*.provisionprofile
+
+# App Store Connect / notarisation credentials
+AuthKey_*.p8
+ExportOptions.plist
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/.env*
+
+# Stray editor/session leftovers
+.git.save

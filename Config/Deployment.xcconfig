@@ -1,0 +1,45 @@
+// ---------------------------------------------------------------------------
+// Deployment configuration
+//
+// Defaults for every site-specific setting the app understands. The values
+// here are deliberately empty: a plain checkout builds and runs, and users
+// register against whichever SIP server they type into the Register screen.
+//
+// Real values belong in `Deployment.local.xcconfig`, which is git-ignored and
+// optionally included at the bottom of this file. Copy the template to get
+// started:
+//
+//     cp Config/Deployment.local.xcconfig.example Config/Deployment.local.xcconfig
+//
+// NOTE: `//` starts a comment in xcconfig files, so no setting here may
+// contain a URL scheme. Endpoints are therefore configured as host + path
+// (no `https://` prefix); the app always talks HTTPS.
+// ---------------------------------------------------------------------------
+
+// Apple Developer Team ID used to sign the app.
+WEBB_DEVELOPMENT_TEAM =
+
+// Host and path of the push-registration service, without a scheme.
+// Example: WEBB_PUSH_REGISTRATION_ENDPOINT = push.example.com/v1/call
+WEBB_PUSH_REGISTRATION_ENDPOINT =
+
+// SIP domains the app is allowed to register for push notifications against.
+// Comma-separated. Registration is skipped for any other domain.
+// Example: WEBB_PUSH_ALLOWED_DOMAINS = pbx.example.com,pbx2.example.com
+WEBB_PUSH_ALLOWED_DOMAINS =
+
+// Aliases that rewrite a SIP server address into its canonical domain, so the
+// same account reached over the LAN and over the internet is one identity.
+// Comma-separated `address=canonicalDomain` pairs.
+// Example: WEBB_DOMAIN_ALIASES = 10.0.0.1=pbx.example.com,203.0.113.10=pbx.example.com
+WEBB_DOMAIN_ALIASES =
+
+// STUN server per SIP domain. Domains listed here get ICE and STUN enabled;
+// domains not listed get no NAT policy.
+// Comma-separated `domain=stunServer` pairs.
+// Example: WEBB_NAT_STUN_POLICIES = pbx.example.com=stun.l.google.com
+WEBB_NAT_STUN_POLICIES =
+
+// Optional local overrides. The `?` makes the include optional, so a checkout
+// without this file still builds.
+#include? "Deployment.local.xcconfig"

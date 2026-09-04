@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="23D60" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="CDContactPhoneList" representedClassName=".CDContactPhoneList" syncable="YES" codeGenerationType="class">
+        <attribute name="url" attributeType="String" defaultValueString=""/>
+    </entity>
+    <entity name="CDRegistration" representedClassName=".CDRegistration" syncable="YES" codeGenerationType="class">
+        <attribute name="password" optional="YES" attributeType="String"/>
+        <attribute name="transport" attributeType="String" defaultValueString="UDP"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+        <attribute name="username" optional="YES" attributeType="String"/>
+    </entity>
+</model>

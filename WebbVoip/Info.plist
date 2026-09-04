@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIconName</key>
+	<string>AppIcon</string>
+	<!-- Site-specific deployment settings, injected from Config/Deployment.xcconfig
+	     (and the git-ignored Config/Deployment.local.xcconfig). Read at runtime by
+	     DeploymentConfig.swift; empty values disable the matching behaviour. -->
+	<key>WebbDeploymentConfig</key>
+	<dict>
+		<key>PushRegistrationEndpoint</key>
+		<string>$(WEBB_PUSH_REGISTRATION_ENDPOINT)</string>
+		<key>PushAllowedDomains</key>
+		<string>$(WEBB_PUSH_ALLOWED_DOMAINS)</string>
+		<key>DomainAliases</key>
+		<string>$(WEBB_DOMAIN_ALIASES)</string>
+		<key>NatStunPolicies</key>
+		<string>$(WEBB_NAT_STUN_POLICIES)</string>
+	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+		<string>remote-notification</string>
+		<string>voip</string>
+		<string>fetch</string>
+	</array>
+</dict>
+</plist>
